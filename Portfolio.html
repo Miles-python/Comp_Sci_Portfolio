@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miles | Computer Science Portfolio</title>
+  <link rel="stylesheet" href="pstyle.css">
+</head>
+
+<body>
+  <header>
+    <h1>Miles' Computer Science Portfolio</h1>
+    <p class="subtitle">Projects from Computer Science Class</p>
+  </header>
+
+  <!-- ================= PROJECT 1 ================= -->
+  <button class="collapsible">Python Turtle Art</button>
+  <div class="content">
+
+    <h3>Python Turtle Art</h3>
+    <p>
+      <strong>Description:</strong><br>
+      In this project, we selected a logo, building, or design and recreated it using Python’s turtle graphics library. I chose the Avengers Tower from the Marvel Cinematic Universe. The project challenged us to think about shapes, proportions, and colors programmatically, as well as how to use loops, conditionals, and user input to create interactive designs. Users can choose the size and color of the drawing, giving them control over the final output. This project taught me how to translate visual concepts into code and develop patience while debugging intricate patterns.
+    </p>
+
+    <h4>Skills Used</h4>
+    <ul>
+      <li>Python</li>
+      <li>Turtle Graphics</li>
+      <li>User Input</li>
+      <li>Loops & Conditionals</li>
+    </ul>
+
+    <div class="project-layout">
+      <div class="image-box project1">
+      <!-- Replace image -->
+      <img src="https://i.postimg.cc/Rh5JSYXf/Screenshot-2026-01-15-at-1-37-11-PM.png" alt="Python Turtle Art">
+      </div>
+
+      <div class="code-box">
+          <button class="toggle-code">Show Code</button>
+
+          <pre class="code-content"><code>
+import turtle
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+num = screen.textinput("Size", "How big do you want it?")
+a = int(num)
+color = screen.textinput("Color", "what color would you like?")
+t.color(color)
+t.speed(0)
+a = a*2
+
+t.up()
+t.left(90)
+t.backward(a)
+t.down()
+
+#Building
+t.forward(a*2)
+t.right(90)
+t.forward(a/7)
+t.right(90)
+t.circle(a/3, 90)
+t.forward(a/6)
+t.right(90)
+t.forward(a/12)
+t.right(90)
+c7 = t.pos()
+c9 = t.ycor()
+t.goto(0, c9)
+t.goto(c7)
+t.left(90)
+t.right(20)
+t.forward(a/4)
+t.left(110)
+c5 = t.pos()
+t.forward(a/6)
+c4 = t.pos()
+c8 = t.ycor()
+t.goto(0, c8)
+t.goto(c4)
+t.right(90)
+t.forward(a/100)
+t.right(90)
+c100 = t.xcor()
+c40 = t.pos()
+t.pensize(3)
+t.circle(a/2,45)
+c2 = t.pos()
+t.circle(a/2,45)
+cord = t.xcor()
+t.goto(cord,-a)
+t.left(90)
+t.pensize(1)
+t.goto(0,-a)
+t.forward(a/1.5)
+c300 = t.pos()
+t.goto(c2)
+t.up()
+t.goto(c5)
+t.backward(a/3)
+t.left(90)
+t.forward(a/55)
+t.right(90)
+t.down()
+
+#Logo
+t.begin_fill()
+t.circle(a/10)
+c4 = t.pos()
+t.end_fill()
+t.circle(a/10, 320)
+c3 = t.pos()
+t.goto(c4)
+t.setheading(90)
+t.forward(a/50)
+t.right(90)
+t.begin_fill()
+t.circle(a/13)
+t.color('white')
+t.end_fill()
+t.color(color)
+t.up()
+t.goto(c3)
+t.down()
+for i in range(2):
+    if i == 0:
+        t.setheading(90)
+        t.right(30)
+        t.backward(a/45)
+        t.begin_fill()
+    c1 = t.pos()
+    y2 = t.ycor()
+    t.setheading(360)
+    t.backward(a/27)
+    c2 = t.pos()
+    y1 = t.ycor()
+    t.setheading(90)
+    t.right(30)
+    t.goto(c1)
+    t.forward(a/4.5)
+    t.right(150)
+    t.forward(a/9)
+    t.left(50)
+    x1 = t.xcor()
+    y6 = t.ycor()
+    c6 = t.pos()
+    t.forward(a/26)
+    c3 = t.pos()
+    t.setheading(90)
+    t.forward(a/6)
+    t.left(90)
+    t.forward(a/20)
+    t.goto(c2)
+    if i == 0:
+        t.end_fill()
+    t.up()
+    t.goto(c3)
+    if i == 0:
+        t.begin_fill()
+    t.down()
+    t.setheading(-140)
+    t.forward(a/26)
+    t.goto(x1,y1)
+    t.setheading(360)
+    t.forward(a/31)
+    t.goto(c3)
+    t.setheading(-140)
+    if i == 0:
+        t.end_fill()
+        t.begin_fill()
+        t.forward(a/26)
+        t.setheading(90)
+        t.forward(a/70)
+        t.left(90)
+        t.forward(a/12)
+        x2 = t.xcor()
+        y3 = t.ycor()
+        t.right(90)
+        t.goto(x2,y6)
+        t.backward(a/70)
+        y4 = t.ycor()
+        t.right(90)
+        t.forward(a/12)
+        t.left(90)
+        t.forward(a/70)
+        t.end_fill()
+    t.up()
+    t.goto(c1)
+    t.setheading(90)
+    t.right(30)
+    t.pensize(2)
+    t.color('white')
+    t.down()
+    if i == 1:
+        t.speed(0)
+        t.pensize(3)
+        t.up()
+        t.goto(x2,y2)
+        t.color(color)
+        t.setheading(90)
+        t.forward(a/21)
+        t.down()
+        t.right(30)
+        t.forward(a/42)
+t.up()
+t.pensize(1)
+t.goto(0,c8)
+t.down()
+t.setheading(90)
+c200 = t.pos()
+for i in range(1000):
+    t.setheading(90)
+    t.backward(a/20)
+    t.right(90)
+    t.forward(a/40)
+    t.left(90)
+    t.forward(a/20)
+    if abs(t.xcor() - c100) < 1:
+        t.speed(0)
+        t.setheading(90)
+        t.backward(a/10)
+        t.up()
+        t.goto(c200)
+        t.backward(a/20)
+        c200 = t.pos()
+        t.down()
+    if abs(t.pos() - c300) < 5:
+        break
+t.up()
+t.goto(c40)
+t.down()
+t.speed(0)
+t.setheading(90)
+t.left(90)
+t.begin_fill()
+t.circle(a/2.01,45)
+t.goto(c300)
+t.color('white')
+t.goto(c100 + 15,-a)
+t.goto(c40)
+t.setheading(360)
+t.forward(15)
+t.end_fill()
+      </code></pre>
+      <button class="copy-code">Copy Code</button>
+    </div>
+    </div>
+  </div>
+
+  <!-- ================= PROJECT 2 ================= -->
+<button class="collapsible">AI Escape Game</button>
+<div class="content">
+
+  <h3>AI Escape Game</h3>
+  <p>
+    <strong>Description:</strong><br>
+    For this project, we designed text-based escape rooms using ChatGPT prompts. Each escape room involved puzzles, logic challenges, and creative problem-solving. Players would navigate different scenarios, and we reviewed each other’s games to give feedback and improve them. The project focused on AI prompt design, critical thinking, and understanding how to create engaging experiences using text alone. By crafting interactive stories, I learned how to combine logic, creativity, and instructions that an AI can follow effectively.
+  </p>
+
+  <h4>Skills Used</h4>
+  <ul>
+    <li>Conditionals</li>
+    <li>Game Logic</li>
+  </ul>
+  <p>
+    <strong>How to Play:</strong><br>
+    Copy the prompt below by clicking the copy prompt button, then go to ChatGPT and paste the prompt into ChatGPT without looking at it. Then play the game and enjoy.
+  </p>
+  <div class="project-layout">
+    <div class="image-box project2">
+      <img src="https://www.shutterstock.com/image-vector/chatgpt-logo-vector-illustration-chat-600nw-2659160215.jpg" alt="AI Escape Game">
+    </div>
+
+    <div class="code-box fixed-bottom-code">
+      <button class="toggle-code">Show Code</button>
+      <pre class="code-content"><code id="ai-code">
+You are the Game Master of The Gourmet’s Table
+
+Theme: You work in a high-end restaurant with lots of ingredients in your restaurant.
+Learning Goal: I want the people in my game to learn about cooking and choosing the right ingredients to make a dish while being creative.
+
+Your task:
+Present the Backstory and then give the player a choice of the customers based on their titles. Make sure that it challenges the player to use their knowledge or reasoning.
+
+Tell player about ratings(briefly): 
+Overarching thing to keep in mind: The reviews of the customers after every meal have the customers give the player a review _/5 stars and make the characters judge harsher and harsher the lower the rating is 
+
+Backstory outline(generate a more filled out backstory):
+You work in a high-end restaurant with lots of ingredients.
+You recently opened your restaurant
+You want to try to keep your reviews high.
+
+Customer description:
+The Kids’ Gourmet Plate: A family brings their child on his birthday who’s a picky eater and wants something “simple but fancy.” You must make a kid-friendly version of a high-end dish. [Write the puzzle scenario, and what the player must do]
+The Late-Night Order: It’s near closing time, and a VIP guest orders something “Fresh and Refreshing.” You have limited ingredients left — choose carefully to make a simple but elegant dish. [Write the puzzle scenario, and what the player must do]
+A vegan dilemma: A vegan customer comes in and you must make a vegan dessert for them(you have to use vegan ingredients to make their dessert). If you don’t make a vegan desert you get a negative review. [Write the puzzle scenario, and what the player must do]
+Final customer(Don’t give option to choose this one/don't show the player this at the start of the game):
+The Critic: A well renowned critic visits your restaurant and asks for the chef's choice. You must make a special dish for the critic.(keep this customer more open, but make sure that the rating dictates how they think about the restaurant. AS WELL THIS CUSTOMER IS A HARSH CRITIC)
+
+Rules / Guardrails:
+- Don’t give options 
+- Give limited examples about the prompt, so the player has to create something by themselves 
+- Let player be creative but stay strict to fundamental laws of the universe
+- No superpowers/abilities
+- Use appropriate language to a high-end restaurant
+- Cannot make ingredients or exotic ingredients appear must have checked the storage for ingredients
+- Give a long list of ingredients that you would find in a high-end restaurant 
+- The player must make things step by step.
+- If the player has an idea of food but doesn't know how to make it you will tell them the correct cooking techniques but not make it for them.
+      </code></pre>
+      <button class="copy-code">Copy Prompt</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PROJECT 3 ================= -->
+<button class="collapsible">Recipe Website</button>
+<div class="content">
+
+  <h3>Recipe Website</h3>
+  <p>
+    <strong>Description:</strong><br>
+    In this project, we created multi-page recipe websites using HTML and CSS. Each website displayed a complete recipe, including ingredients, instructions, and images. I focused on creating a visually appealing layout that was easy to read and navigate. This project helped me understand website structure, styling, and responsive design, as well as how to present content clearly on a page. By combining text, images, and styling, I learned how to turn a simple webpage into a professional-looking site.
+  </p>
+
+  <h4>Skills Used</h4>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Website Layout</li>
+  </ul>
+
+  <div class="project-layout">
+    <div class="image-box project3">
+      <img src="https://i.postimg.cc/mg89Y820/Screenshot_2026_01_15_at_1_36_43_PM.png" alt="Recipe Website">
+    </div>
+
+    <div class="code-box">
+      <button class="toggle-code">Show Code</button>
+      <pre class="code-content"><code id="recipe-code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Recipe for Cookies&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 class="H1"&gt;San Francisco Starers Scary Starey Cookies&lt;/h1&gt;
+    &lt;div&gt;
+      &lt;img class="img1" src="https://mojo.generalmills.com/api/public/content/_pLFRXFETcuXWg_Z0MhZPw_webp_base.webp?v=1c273e93&amp;t=191ddcab8d1c415fa10fa00a14351227" style="float:right; margin-left:10px;" height="300" width="600"&gt;
+      &lt;p class="p1"&gt;These are the infamous San Francisco Starer’s Scar Starey Cookies, said to be the best cookies in the entire world. Their recipe, legend claims, comes from the very peak of The Starer’s Mountain...&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="Ingredients"&gt;
+      &lt;h2&gt;Ingredients:&lt;/h2&gt;
+      &lt;ul class="list1"&gt;
+        &lt;li&gt;8 Tablespoons of Salted Butter&lt;/li&gt;
+        &lt;li&gt;1/2 Cup White Sugar&lt;/li&gt;
+        &lt;li&gt;1/4 Cup Lightly Packed Brown Sugar&lt;/li&gt;
+        &lt;li&gt;1 Teaspoon Vanilia Extract&lt;/li&gt;
+        &lt;li&gt;1 Egg&lt;/li&gt;
+        &lt;li&gt;1 1/2 Cup All Purpose Flour&lt;/li&gt;
+        &lt;li&gt;1/2 Teaspoon Baking Soda&lt;/li&gt;
+        &lt;li&gt;1/4 Teaspoon Salt&lt;/li&gt;
+        &lt;li&gt;3/4 Cups Chocolate Chips&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class="Instructions"&gt;
+      &lt;h2&gt;Instructions:&lt;/h2&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Preheat the oven to 350 degrees...&lt;/li&gt;
+        &lt;li&gt;Using a stand mixer or electric beaters, beat the butter...&lt;/li&gt;
+        &lt;li&gt;Add the flour, baking soda, and salt...&lt;/li&gt;
+        &lt;li&gt;Roll the dough into 12 large balls...&lt;/li&gt;
+        &lt;li&gt;Let them cool on the pan for a good 30 minutes...&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+
+    &lt;div class="Extra"&gt;
+      &lt;h2&gt;WARNING!!&lt;/h2&gt;
+      &lt;img class="img" src="https://pinchofyum.com/wp-content/uploads/CookieTroubleshooting.jpeg" style="float: right; margin-left:10px;"&gt;
+      &lt;p class="p1"&gt;They say you only get one chance to make the Starer’s cookies right...&lt;/p&gt;
+      &lt;p class="p1"&gt;Because if you mess up...&lt;/p&gt;
+      &lt;p class="p1"&gt;The San Francisco Starer can feel every mistake...&lt;/p&gt;
+      &lt;p class="p1"&gt;He doesn’t speak. He doesn’t move...&lt;/p&gt;
+      &lt;p class="p1"&gt;So when you bake the Scary Starey Cookies...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+      <button class="copy-code">Copy Code</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ================= PROJECT 4 ================= -->
+  <button class="collapsible">Dear Data Postcard</button>
+  <div class="content">
+
+    <h3>Dear Data Postcard</h3>
+    <p>
+      <strong>Description:</strong><br>
+      For the Dear Data Postcard project, I tracked personal data over the course of a week and represented it visually in a postcard-style design. I specifically recorded what I ate each day, capturing patterns and habits over time. This project emphasized data collection, analysis, and creative visualization. The key to this postcard is that each big circle represents a day, each circle thats inside the big circles represents a meal where the size tell you the volume of food I ate. the stars idicate what time of day it was when I had that meal and the symbols inside indicate whether or not I made the meal myself or not.
+    </p>
+
+    <h4>Skills Used</h4>
+    <ul>
+      <li>Data Collection</li>
+      <li>Visualization</li>
+      <li>Design Thinking</li>
+    </ul>
+    <div class="image-box project4">
+    <img class="single-image" src="https://i.postimg.cc/bwWyft6s/Screenshot-2026-01-15-at-1-41-03-PM.png" alt="Dear Data Postcard">
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
